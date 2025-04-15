@@ -17,6 +17,7 @@
             font-family: 'Open Sans', sans-serif;
             color: #333;
             background-color: #FFFFFF;
+            padding-bottom: 80px;
         }
 
         /* Header */
@@ -258,30 +259,91 @@
 
         /* Footer */
         footer {
-            height: 100px;
             background-color: #2F4F4F;
             color: white;
+            padding: 15px 5%;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 20px;
+        }
+
+        .footer-info {
+            flex: 0 1 auto;
+        }
+
+        .footer-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #F4A261;
         }
 
         .footer-contacts {
+            flex: 0 1 auto;
             display: flex;
             align-items: center;
+            gap: 20px;
         }
 
         .footer-phones {
-            margin-right: 0;
-            margin-bottom: 10px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-phones a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .footer-phones a:hover {
+            color: #F4A261;
+        }
+
+        .footer-phones i {
+            margin-right: 5px;
+            color: #F4A261;
+            font-size: 12px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
         }
 
         .social-icons a {
-            color: #F4A261;
-            font-size: 24px;
-            margin-left: 15px;
+            color: white;
+            font-size: 18px;
             text-decoration: none;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #F4A261;
+            transform: scale(1.1);
+        }
+
+        .copyright {
+            flex: 0 1 auto;
+            text-align: center;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            white-space: nowrap;
         }
 
         /* Modal */
@@ -474,20 +536,26 @@
             }
 
             footer {
+                padding: 10px 5%;
+            }
+
+            .footer-content {
                 flex-direction: column;
-                height: auto;
-                padding: 20px 5%;
                 text-align: center;
+                gap: 10px;
+            }
+
+            .footer-info, .footer-contacts, .copyright {
+                width: 100%;
             }
 
             .footer-contacts {
                 flex-direction: column;
-                margin-bottom: 20px;
+                gap: 10px;
             }
 
-            .footer-phones {
-                margin-right: 0;
-                margin-bottom: 10px;
+            body {
+                padding-bottom: 120px;
             }
         }
 
@@ -752,19 +820,32 @@
 
 <!-- Footer -->
 <footer id="contacts">
-    <div class="copyright">© 2025 Мебель на заказ. Все права защищены</div>
-
-    <div class="footer-contacts">
-        <div class="footer-phones">
-            <a href="tel:0777575707" class="phone">0777 575 707</a>
-            <a href="tel:0505999065" class="phone">0505 999 065</a>
+    <div class="footer-content">
+        <div class="footer-info">
+            <h3 class="footer-title">Мебель на заказ</h3>
         </div>
+        <div class="footer-contacts">
+            <div class="footer-phones">
+                <a href="tel:0777575707">
+                    <i class="fas fa-phone"></i>
+                    0777 575 707
+                </a>
+                <a href="tel:0505999065">
+                    <i class="fas fa-phone"></i>
+                    0505 999 065
+                </a>
+            </div>
 
-        <div class="social-icons">
-            <a onclick="window.open('https://wa.me/996777575707')" href="#"
-               style="color: #25D366; font-size: 24px;" class="btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a onclick="window.open('https://t.me/Pay24_RazakovE')" href="#"
-               style="color: #0088cc; font-size: 24px;" target="_blank"><i class="fab fa-telegram"></i></a>
+            <div class="social-icons">
+                <a onclick="window.open('https://wa.me/996777575707')" href="#" target="_blank"
+                   style="color: #25D366; font-size: 24px;">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a onclick="window.open('https://t.me/Pay24_RazakovE')" href="#" target="_blank"
+                   style="color: #0088cc; font-size: 24px;">
+                    <i class="fab fa-telegram"></i>
+                </a>
+            </div>
         </div>
     </div>
 </footer>
