@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мебель на заказ - Индивидуальный дизайн и качество</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            background-color: #FFFFFF;
+        }
+
+        /* Header */
+        header {
+            height: 80px;
+            background-color: #2F4F4F;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #F4A261;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .phone {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .phone i {
+            color: #F4A261;
+            margin-right: 5px;
+        }
+
+        .cta-button {
+            background-color: #F4A261;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e67e22;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 600px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('background.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            margin-top: 80px;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .benefits {
+            display: flex;
+            margin-top: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .benefit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+
+        .benefit i {
+            color: #F4A261;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .benefit span {
+            color: white;
+            margin-top: 5px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 60px 5%;
+            background-color: #F5F5DC;
+        }
+
+        .section-title {
+            color: #2F4F4F;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .service-content {
+            padding: 20px;
+        }
+
+        .service-title {
+            color: #2F4F4F;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+        }
+
+        .service-description {
+            margin-bottom: 15px;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 60px 5%;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            border: 2px solid #2F4F4F;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+
+        /* Footer */
+        footer {
+            height: 100px;
+            background-color: #2F4F4F;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+        }
+
+        .footer-contacts {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-phones {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+
+        .social-icons a {
+            color: #F4A261;
+            font-size: 24px;
+            margin-left: 15px;
+            text-decoration: none;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            animation: fadeIn 0.3s;
+        }
+
+        .modal-title {
+            color: #2F4F4F;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .close {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #2F4F4F;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .form-group button {
+            background-color: #F4A261;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .form-group button:hover {
+            background-color: #e67e22;
+        }
+
+        .success-message {
+            color: green;
+            text-align: center;
+            margin-top: 10px;
+            display: none;
+        }
+
+        /* Добавляем новые стили */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #F4A261;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 1000;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+        }
+
+        .testimonials {
+            padding: 60px 5%;
+            background-color: #f9f9f9;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            margin: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #2F4F4F;
+            margin-top: 10px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #666;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Улучшаем мобильную версию */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 5%;
+            }
+
+            nav {
+                margin: 15px 0;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                margin: 10px 0;
+            }
+
+            .phone {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+
+            .hero {
+                height: auto;
+                padding: 100px 10px 50px;
+                margin-top: 0;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .benefit {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 10px;
+            }
+
+            footer {
+                flex-direction: column;
+                height: auto;
+                padding: 20px 5%;
+                text-align: center;
+            }
+
+            .footer-contacts {
+                flex-direction: column;
+                margin-bottom: 20px;
+            }
+
+            .footer-phones {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+        .generate-image-btn {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: #F4A261;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover .generate-image-btn {
+            opacity: 1;
+        }
+
+        .gallery-item {
+            position: relative;
+        }
+
+        /* Стили для модального окна просмотра изображений */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-modal-content {
+            max-width: 90%;
+            max-height: 90vh;
+            margin: auto;
+            display: block;
+            position: relative;
+        }
+
+        .image-modal img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        .image-modal .close {
+            position: absolute;
+            right: 25px;
+            top: 10px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .image-modal .close:hover {
+            color: #F4A261;
+        }
+
+        /* Стили для кнопок навигации */
+        .image-modal .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .image-modal .nav-button:hover {
+            background: rgba(244, 162, 97, 0.8);
+        }
+
+        .image-modal .prev {
+            left: 20px;
+        }
+
+        .image-modal .next {
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="logo">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <rect x="5" y="20" width="30" height="15" rx="3" fill="white"/>
+            <rect x="8" y="35" width="5" height="5" rx="1" fill="white"/>
+            <rect x="27" y="35" width="5" height="5" rx="1" fill="white"/>
+        </svg>
+        <div class="logo-text">Мебель на заказ</div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#services">Каталог</a></li>
+            <li><a href="#portfolio">Портфолио</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <div class="contact-info">
+        <a href="tel:0777575707" class="phone">
+            <i class="fas fa-phone"></i>
+            0777 575 707
+        </a>
+        <a href="#" class="cta-button" onclick="openModal('measureModal')">Заказать замер</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <h1>Мебель на заказ для вашего уюта</h1>
+    <p>Индивидуальный дизайн, экологичные материалы, лучшие цены</p>
+    <a href="#" class="cta-button" onclick="openModal('consultationModal')">Заказать консультацию</a>
+
+    <div class="benefits">
+        <div class="benefit">
+            <i class="fas fa-ruler"></i>
+            <span>Индивидуальный дизайн</span>
+        </div>
+        <div class="benefit">
+            <i class="fas fa-leaf"></i>
+            <span>Экологичные материалы</span>
+        </div>
+        <div class="benefit">
+            <i class="fas fa-hammer"></i>
+            <span>Качественная сборка</span>
+        </div>
+        <div class="benefit">
+            <i class="fas fa-dollar-sign"></i>
+            <span>Доступные цены</span>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services" id="services">
+    <h2 class="section-title">Наши услуги</h2>
+
+    <div class="services-grid">
+        <!-- Kitchen -->
+        <div class="service-card">
+            <div class="service-image" style="background-image: url('kuhnya_na_zakaz.png');"></div>
+            <div class="service-content">
+                <h3 class="service-title">Кухни на заказ — от 50 000 сом</h3>
+                <p class="service-description">Функциональные и стильные решения для вашей кухни</p>
+                <a href="#" class="cta-button" onclick="openModal('kitchenModal')">Заказать</a>
+            </div>
+        </div>
+
+        <!-- Wardrobes -->
+        <div class="service-card">
+            <div class="service-image" style="background-image: url('background.png');"></div>
+            <div class="service-content">
+                <h3 class="service-title">Шкафы-купе — от 30 000 сом</h3>
+                <p class="service-description">Экономия пространства и индивидуальный дизайн</p>
+                <a href="#" class="cta-button" onclick="openModal('wardrobeModal')">Заказать</a>
+            </div>
+        </div>
+
+        <!-- Soft furniture -->
+        <div class="service-card">
+            <div class="service-image" style="background-image: url('myagkaia_mebel.png');"></div>
+            <div class="service-content">
+                <h3 class="service-title">Мягкая мебель — от 40 000 сом</h3>
+                <p class="service-description">Комфорт и стиль для вашего дома</p>
+                <a href="#" class="cta-button" onclick="openModal('softFurnitureModal')">Заказать</a>
+            </div>
+        </div>
+
+        <!-- Kids furniture -->
+        <div class="service-card">
+            <div class="service-image" style="background-image: url('background.png');"></div>
+            <div class="service-content">
+                <h3 class="service-title">Детская мебель — от 25 000 сом</h3>
+                <p class="service-description">Безопасные и практичные решения для детей</p>
+                <a href="#" class="cta-button" onclick="openModal('kidsFurnitureModal')">Заказать</a>
+            </div>
+        </div>
+
+        <!-- Office furniture -->
+        <div class="service-card">
+            <div class="service-image" style="background-image: url('background.png');"></div>
+            <div class="service-content">
+                <h3 class="service-title">Офисная мебель — от 20 000 сом</h3>
+                <p class="service-description">Эргономика и стиль для вашего рабочего пространства</p>
+                <a href="#" class="cta-button" onclick="openModal('officeFurnitureModal')">Заказать</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="portfolio" id="portfolio">
+    <h2 class="section-title">Наши работы</h2>
+
+    <div class="gallery">
+        <div class="gallery-item" style="background-image: url('./foto/televizor3.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('./foto/televizor2.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('./foto/televizor.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('./foto/stol.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('./foto/shkaf_zoloto.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('./foto/shkaf_stena_seryi.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('./foto/shkaf_stena.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('./foto/shkaf_seryi.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('./foto/shkaf_lestnica.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('./foto/shkaf_dver.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('./foto/shkaf_belyi2.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('./foto/shkaf_belyi.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('./foto/shkaf.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('./foto/rakovina.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('./foto/kuhnya2.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('./foto/kuhnya.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('./foto/komod.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('./foto/garderob.jpg');"></div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <h2 class="section-title">Отзывы наших клиентов</h2>
+    <div class="services-grid">
+        <div class="testimonial-card">
+            <p class="testimonial-text">"Отличная работа! Заказали кухню, все сделали в срок и с отличным качеством. Особенно понравилось внимание к деталям."</p>
+            <div class="testimonial-author">- Анна С.</div>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">"Профессиональный подход к работе. Шкаф-купе получился именно таким, как мы хотели. Спасибо за качество!"</p>
+            <div class="testimonial-author">- Михаил К.</div>
+        </div>
+        <div class="testimonial-card">
+            <p class="testimonial-text">"Заказывали детскую мебель. Все сделано с учетом безопасности и удобства для ребенка. Очень довольны результатом."</p>
+            <div class="testimonial-author">- Елена П.</div>
+        </div>
+    </div>
+</section>
+
+<!-- Scroll to Top Button -->
+<div class="scroll-to-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
+<!-- Footer -->
+<footer id="contacts">
+    <div class="copyright">© 2025 Мебель на заказ. Все права защищены</div>
+
+    <div class="footer-contacts">
+        <div class="footer-phones">
+            <a href="tel:0777575707" class="phone">0777 575 707</a>
+            <a href="tel:0505999065" class="phone">0505 999 065</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!-- Modals -->
+<!-- Measure Modal -->
+<div id="measureModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('measureModal')">&times;</span>
+        <h3 class="modal-title">Заказать замер</h3>
+        <form id="measureForm" onsubmit="sendToTelegram(event, 'measureForm', 'Заказ замера')">
+            <div class="form-group">
+                <label for="measure-name">Ваше имя</label>
+                <input type="text" id="measure-name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="measure-phone">Ваш телефон</label>
+                <input type="tel" id="measure-phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="measure-address">Адрес</label>
+                <input type="text" id="measure-address" name="address" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Отправить заявку</button>
+            </div>
+            <div class="success-message" id="measure-success">Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.</div>
+        </form>
+    </div>
+</div>
+
+<!-- Consultation Modal -->
+<div id="consultationModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('consultationModal')">&times;</span>
+        <h3 class="modal-title">Заказать консультацию</h3>
+        <form id="consultationForm" onsubmit="sendToTelegram(event, 'consultationForm', 'Заказ консультации')">
+            <div class="form-group">
+                <label for="consultation-name">Ваше имя</label>
+                <input type="text" id="consultation-name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="consultation-phone">Ваш телефон</label>
+                <input type="tel" id="consultation-phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="consultation-message">Ваш вопрос</label>
+                <input type="text" id="consultation-message" name="message">
+            </div>
+            <div class="form-group">
+                <button type="submit">Отправить заявку</button>
+            </div>
+            <div class="success-message" id="consultation-success">Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.</div>
+        </form>
+    </div>
+</div>
+
+<!-- Kitchen Modal -->
+<div id="kitchenModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('kitchenModal')">&times;</span>
+        <h3 class="modal-title">Заказать кухню</h3>
+        <form id="kitchenForm" onsubmit="sendToTelegram(event, 'kitchenForm', 'Заказ кухни')">
+            <div class="form-group">
+                <label for="kitchen-name">Ваше имя</label>
+                <input type="text" id="kitchen-name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="kitchen-phone">Ваш телефон</label>
+                <input type="tel" id="kitchen-phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="kitchen-type">Тип кухни</label>
+                <select id="kitchen-type" name="type">
+                    <option value="Прямая">Прямая</option>
+                    <option value="Угловая">Угловая</option>
+                    <option value="П-образная">П-образная</option>
+                    <option value="Другая">Другая</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit">Отправить заявку</button>
+            </div>
+            <div class="success-message" id="kitchen-success">Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.</div>
+        </form>
+    </div>
+</div>
+
+<!-- Wardrobe Modal -->
+<div id="wardrobeModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('wardrobeModal')">&times;</span>
+        <h3 class="modal-title">Заказать шкаф-купе</h3>
+        <form id="wardrobeForm" onsubmit="sendToTelegram(event, 'wardrobeForm', 'Заказ шкафа-купе')">
+            <div class="form-group">
+                <label for="wardrobe-name">Ваше имя</label>
+                <input type="text" id="wardrobe-name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="wardrobe-phone">Ваш телефон</label>
+                <input type="tel" id="wardrobe-phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="wardrobe-size">Примерный размер</label>
+                <input type="text" id="wardrobe-size" name="size" placeholder="Например: 2x2.5м">
+            </div>
+            <div class="form-group">
+                <button type="submit">Отправить заявку</button>
+            </div>
+            <div class="success-message" id="wardrobe-success">Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.</div>
+        </form>
+    </div>
+</div>
+
+<!-- Soft Furniture Modal -->
+<div id="softFurnitureModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('softFurnitureModal')">&times;</span>
+        <h3 class="modal-title">Заказать мягкую мебель</h3>
+        <form id="softFurnitureForm" onsubmit="sendToTelegram(event, 'softFurnitureForm', 'Заказ мягкой мебели')">
+            <div class="form-group">
+                <label for="soft-furniture-name">Ваше имя</label>
+                <input type="text" id="soft-furniture-name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="soft-furniture-phone">Ваш телефон</label>
+                <input type="tel" id="soft-furniture-phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="soft-furniture-type">Тип мебели</label>
+                <select id="soft-furniture-type" name="type">
+                    <option value="Диван">Диван</option>
+                    <option value="Кресло">Кресло</option>
+                    <option value="Кровать">Кровать</option>
+                    <option value="Другой">Другой</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit">Отправить заявку</button>
+            </div>
+            <div class="success-message" id="soft-furniture-success">Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.</div>
+        </form>
+    </div>
+</div>
+
+<!-- Kids Furniture Modal -->
+<div id="kidsFurnitureModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('kidsFurnitureModal')">&times;</span>
+        <h3 class="modal-title">Заказать детскую мебель</h3>
+        <form id="kidsFurnitureForm" onsubmit="sendToTelegram(event, 'kidsFurnitureForm', 'Заказ детской мебели')">
+            <div class="form-group">
+                <label for="kids-furniture-name">Ваше имя</label>
+                <input type="text" id="kids-furniture-name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="kids-furniture-phone">Ваш телефон</label>
+                <input type="tel" id="kids-furniture-phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="kids-furniture-type">Тип мебели</label>
+                <select id="kids-furniture-type" name="type">
+                    <option value="Кровать">Кровать</option>
+                    <option value="Стол">Стол</option>
+                    <option value="Шкаф">Шкаф</option>
+                    <option value="Комплект">Комплект</option>
+                    <option value="Другой">Другой</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit">Отправить заявку</button>
+            </div>
+            <div class="success-message" id="kids-furniture-success">Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.</div>
+        </form>
+    </div>
+</div>
+
+<!-- Office Furniture Modal -->
+<div id="officeFurnitureModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('officeFurnitureModal')">&times;</span>
+        <h3 class="modal-title">Заказать офисную мебель</h3>
+        <form id="officeFurnitureForm" onsubmit="sendToTelegram(event, 'officeFurnitureForm', 'Заказ офисной мебели')">
+            <div class="form-group">
+                <label for="office-furniture-name">Ваше имя</label>
+                <input type="text" id="office-furniture-name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="office-furniture-phone">Ваш телефон</label>
+                <input type="tel" id="office-furniture-phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="office-furniture-type">Тип мебели</label>
+                <select id="office-furniture-type" name="type">
+                    <option value="Стол">Стол</option>
+                    <option value="Стул">Стул</option>
+                    <option value="Шкаф">Шкаф</option>
+                    <option value="Комплект">Комплект</option>
+                    <option value="Другой">Другой</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit">Отправить заявку</button>
+            </div>
+            <div class="success-message" id="office-furniture-success">Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.</div>
+        </form>
+    </div>
+</div>
+
+<!-- Image Modal -->
+<div id="imageModal" class="image-modal">
+    <span class="close" onclick="closeImageModal()">&times;</span>
+    <button class="nav-button prev" onclick="navigateImage(-1)">❮</button>
+    <button class="nav-button next" onclick="navigateImage(1)">❯</button>
+    <div class="image-modal-content">
+        <img id="modalImage" src="" alt="Увеличенное изображение">
+    </div>
+</div>
+
+<script>
+    // Telegram Bot Token and Chat ID
+    const botToken = "991395711:AAHp9GwPdKwquW76ZmlNjICxQoxs0R1i_tI";
+    const chatId = "629524485";
+
+    // Открытие модальных окон
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = 'flex';
+    }
+
+    // Закрытие модальных окон
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+    }
+
+    // Закрытие модальных окон при клике вне контента
+    window.onclick = function(event) {
+        const modals = document.getElementsByClassName('modal');
+        for (let i = 0; i < modals.length; i++) {
+            if (event.target == modals[i]) {
+                modals[i].style.display = 'none';
+            }
+        }
+    }
+
+    // Функция отправки данных в Telegram
+    function sendToTelegram(event, formId, formType) {
+        event.preventDefault();
+
+        const form = document.getElementById(formId);
+        const formData = new FormData(form);
+        const successMessage = document.getElementById(formId.replace('Form', '-success'));
+
+        let message = `💼 ${formType}:\n\n`;
+
+        // Маппинг полей на русский язык
+        const fieldNames = {
+            'name': 'Имя',
+            'phone': 'Телефон',
+            'address': 'Адрес',
+            'message': 'Сообщение',
+            'type': 'Тип',
+            'size': 'Размер'
+        };
+
+        for (let [key, value] of formData.entries()) {
+            const fieldName = fieldNames[key] || key;
+            message += `${fieldName}: ${value}\n`;
+        }
+
+        const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+        const data = {
+            chat_id: chatId,
+            text: message,
+            parse_mode: 'HTML'
+        };
+
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    form.reset();
+                    successMessage.style.display = 'block';
+                    setTimeout(() => {
+                        closeModal(formId.replace('Form', 'Modal'));
+                        successMessage.style.display = 'none';
+                    }, 3000);
+                } else {
+                    console.error('Telegram API Error:', data);
+                    alert('Произошла ошибка при отправке формы. Пожалуйста, попробуйте позже.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Произошла ошибка при отправке формы. Пожалуйста, попробуйте позже.');
+            });
+    }
+
+    // Функция прокрутки наверх
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    // Показ/скрытие кнопки "Наверх"
+    window.onscroll = function() {
+        const scrollButton = document.querySelector('.scroll-to-top');
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollButton.classList.add('visible');
+        } else {
+            scrollButton.classList.remove('visible');
+        }
+    };
+
+    // Маска для телефона
+    document.querySelectorAll('input[type="tel"]').forEach(input => {
+        input.addEventListener('input', function(e) {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+            e.target.value = !x[2] ? x[1] : x[1] + ' ' + x[2] + (x[3] ? ' ' + x[3] : '');
+        });
+    });
+
+    // Функции для работы с модальным окном изображений
+    let currentImageIndex = 0;
+    const galleryImages = [];
+
+    function openImageModal(imageUrl) {
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        modal.style.display = 'flex';
+        modalImg.src = imageUrl;
+        
+        // Собираем все URL изображений из галереи
+        galleryImages.length = 0;
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            const url = item.style.backgroundImage.slice(4, -1).replace(/"/g, "");
+            galleryImages.push(url);
+        });
+        
+        // Находим индекс текущего изображения
+        currentImageIndex = galleryImages.indexOf(imageUrl);
+    }
+
+    function navigateImage(direction) {
+        currentImageIndex = (currentImageIndex + direction + galleryImages.length) % galleryImages.length;
+        document.getElementById('modalImage').src = galleryImages[currentImageIndex];
+    }
+
+    // Добавляем обработчики клавиш для навигации
+    document.addEventListener('keydown', function(e) {
+        if (document.getElementById('imageModal').style.display === 'flex') {
+            if (e.key === 'ArrowLeft') {
+                navigateImage(-1);
+            } else if (e.key === 'ArrowRight') {
+                navigateImage(1);
+            } else if (e.key === 'Escape') {
+                closeImageModal();
+            }
+        }
+    });
+
+    // Добавляем обработчики кликов для всех изображений в галерее
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const imageUrl = this.style.backgroundImage.slice(4, -1).replace(/"/g, "");
+            openImageModal(imageUrl);
+        });
+    });
+
+    // Закрытие модального окна при клике вне изображения
+    document.getElementById('imageModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeImageModal();
+        }
+    });
+
+    function closeImageModal() {
+        document.getElementById('imageModal').style.display = 'none';
+    }
+</script>
+</rewritten_file>
