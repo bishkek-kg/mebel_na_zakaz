@@ -1002,7 +1002,7 @@
 
         <!-- Wardrobes -->
         <div class="service-card">
-            <div class="service-image" style="background-image: url('background.png');"></div>
+            <div class="service-image" style="background-image: url('shkaf_kupe.png');"></div>
             <div class="service-content">
                 <h3 class="service-title">Шкафы-купе — от 30 000 сом</h3>
                 <p class="service-description">Экономия пространства и индивидуальный дизайн</p>
@@ -1022,7 +1022,7 @@
 
         <!-- Kids furniture -->
         <div class="service-card">
-            <div class="service-image" style="background-image: url('background.png');"></div>
+            <div class="service-image" style="background-image: url('detskaia_mebel.png');"></div>
             <div class="service-content">
                 <h3 class="service-title">Детская мебель — от 25 000 сом</h3>
                 <p class="service-description">Безопасные и практичные решения для детей</p>
@@ -1032,7 +1032,7 @@
 
         <!-- Office furniture -->
         <div class="service-card">
-            <div class="service-image" style="background-image: url('background.png');"></div>
+            <div class="service-image" style="background-image: url('ofisnaya_mebel.png');"></div>
             <div class="service-content">
                 <h3 class="service-title">Офисная мебель — от 20 000 сом</h3>
                 <p class="service-description">Эргономика и стиль для вашего рабочего пространства</p>
@@ -1340,9 +1340,9 @@
 </div>
 
 <script>
-    // Telegram Bot Token and Chat ID
-    const botToken = "991395711:AAHp9GwPdKwquW76ZmlNjICxQoxs0R1i_tI";
-    const chatId = "629524485";
+    const mebel = "991395711:AAHp9GwPdKwquW76ZmlNjICxQoxs0R1i_tI";
+    // const chatId = "629524485";
+    const mebelId = "-1002679942394";
 
     // Открытие модальных окон
     function openModal(modalId) {
@@ -1390,9 +1390,9 @@
             message += `${fieldName}: ${value}\n`;
         }
 
-        const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+        const url = `https://api.telegram.org/bot${mebel}/sendMessage`;
         const data = {
-            chat_id: chatId,
+            chat_id: mebelId,
             text: message,
             parse_mode: 'HTML'
         };
