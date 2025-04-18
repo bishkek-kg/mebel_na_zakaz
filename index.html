@@ -1344,9 +1344,9 @@
 </div>
 
 <script>
-    const mebel = "991395711:AAHp9GwPdKwquW76ZmlNjICxQoxs0R1i_tI";
-    // const chatId = "629524485";
     const mebelId = "-1002499392806";
+    const mebel = "7520583043:AAG1Qp5gR36_nFOdNqzu1Dgntn44jR8Kd1g";
+
 
     // Открытие модальных окон
     function openModal(modalId) {
@@ -1465,8 +1465,19 @@
     // Маска для телефона
     document.querySelectorAll('input[type="tel"]').forEach(input => {
         input.addEventListener('input', function(e) {
-            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
-            e.target.value = !x[2] ? x[1] : x[1] + ' ' + x[2] + (x[3] ? ' ' + x[3] : '');
+            // Remove all non-digit characters
+            let value = e.target.value.replace(/\D/g, '');
+
+            // Ensure the number starts with 0
+            if (value.length > 0 && value[0] !== '0') {
+                value = '0' + value;
+            }
+
+            // Limit to 10 digits (0 + 9 digits)
+            value = value.substring(0, 10);
+
+            // Update the input value
+            e.target.value = value;
         });
     });
 
